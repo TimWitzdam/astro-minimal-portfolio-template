@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import LogoImage from "/public/logo.webp";
+import MailIcon from "/public/icons/mail.svg";
+
 interface Props {
   title: string;
   description: string;
@@ -7,7 +11,28 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<!doctype html>
+<script>
+  const linkMenuButton = document.getElementById(
+    "link-menu-button"
+  ) as HTMLButtonElement;
+  const linkMenu = document.getElementById("link-menu") as HTMLDivElement;
+  const openIndicator = document.getElementById(
+    "open-indicator"
+  ) as HTMLSpanElement;
+
+  linkMenuButton.addEventListener("click", () => {
+    if (linkMenu.classList.contains("opacity-0")) {
+      linkMenu.classList.remove("pointer-events-none");
+      linkMenu.classList.remove("opacity-0");
+      openIndicator.innerText = "-";
+    } else {
+      linkMenu.classList.add("pointer-events-none");
+      linkMenu.classList.add("opacity-0");
+      openIndicator.innerText = "+";
+    }
+  });
+</script>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +45,77 @@ const { title, description } = Astro.props;
     <meta property="og:description" content={description} />
   </head>
   <body>
-    <header></header>
+    <header>
+      <div
+        class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-between"
+      >
+        <a href="/">
+          <Image src={LogoImage} alt={"Logo"} width={50} height={50} />
+        </a>
+        <nav class="ml-auto mr-6 md:m-0">
+          <ul class="hidden sm:flex md:items-center md:gap-2">
+            <li>
+              <a
+                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                href="/">Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                href="/about">About</a
+              >
+            </li>
+            <li>
+              <a
+                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                href="/projects">Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                href="/blog">Blog</a
+              >
+            </li>
+          </ul>
+          <div class="relative md:hidden">
+            <button
+              id="link-menu-button"
+              class="relative font-medium opacity-60 p-4"
+              >Menu <span id="open-indicator">+</span></button
+            >
+            <div
+              id="link-menu"
+              class="absolute p-2 right-0 bg-gray-bg rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0"
+            >
+              <ul>
+                <li>
+                  <a class="block pl-4 py-3" href="/">Home</a>
+                </li>
+                <li>
+                  <a class="block pl-4 py-3" href="/about">About</a>
+                </li>
+                <li>
+                  <a class="block pl-4 py-3" href="/projects">Projects</a>
+                </li>
+                <li>
+                  <a class="block pl-4 py-3" href="/blog">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div>
+          <a
+            href="mailto:tim@witzdam.com"
+            class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <Image src={MailIcon} alt={"Mail"} width={25} height={25} />
+          </a>
+        </div>
+      </div>
+    </header>
     <main>
       <slot />
     </main>
