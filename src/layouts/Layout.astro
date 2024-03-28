@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import LogoImage from "/public/logo.webp";
 import MailIcon from "/public/icons/mail.svg";
+import { navBarLinks } from "../config";
 
 interface Props {
   title: string;
@@ -54,30 +55,18 @@ const { title, description } = Astro.props;
         </a>
         <nav class="ml-auto mr-6 md:m-0">
           <ul class="hidden sm:flex md:items-center md:gap-2">
-            <li>
-              <a
-                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
-                href="/">Home</a
-              >
-            </li>
-            <li>
-              <a
-                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
-                href="/about">About</a
-              >
-            </li>
-            <li>
-              <a
-                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
-                href="/projects">Projects</a
-              >
-            </li>
-            <li>
-              <a
-                class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
-                href="/blog">Blog</a
-              >
-            </li>
+            {
+              navBarLinks.map((link) => (
+                <li>
+                  <a
+                    class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                    href={link.url}
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
           <div class="relative md:hidden">
             <button
@@ -90,18 +79,15 @@ const { title, description } = Astro.props;
               class="absolute p-2 right-0 bg-gray-bg rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0"
             >
               <ul>
-                <li>
-                  <a class="block pl-4 py-3" href="/">Home</a>
-                </li>
-                <li>
-                  <a class="block pl-4 py-3" href="/about">About</a>
-                </li>
-                <li>
-                  <a class="block pl-4 py-3" href="/projects">Projects</a>
-                </li>
-                <li>
-                  <a class="block pl-4 py-3" href="/blog">Blog</a>
-                </li>
+                {
+                  navBarLinks.map((link) => (
+                    <li>
+                      <a class="block pl-4 py-3" href={link.url}>
+                        {link.title}
+                      </a>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>
@@ -111,7 +97,7 @@ const { title, description } = Astro.props;
             href="mailto:tim@witzdam.com"
             class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
           >
-            <Image src={MailIcon} alt={"Mail"} width={25} height={25} />
+            <Image src={MailIcon} alt={"Mail"} width={20} height={20} />
           </a>
         </div>
       </div>
