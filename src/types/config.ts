@@ -21,3 +21,35 @@ export type Identity = {
   role: string;
   description: string;
 };
+
+export type ResumeItem = {
+  title: string;
+  company: {
+    name: string;
+    image: string;
+    url: string;
+  };
+  date: string;
+};
+
+export type AboutPageContent = {
+  about: {
+    description: string;
+    image_l: {
+      url: string;
+      alt: string;
+    };
+    image_r: {
+      url: string;
+      alt: string;
+    };
+  };
+  work: {
+    description: string;
+    items: ResumeItem[];
+  };
+  connect: {
+    description: string;
+    links: SocialLink[];
+  };
+};

@@ -9,12 +9,14 @@ interface Props {
 const { text, href, external } = Astro.props;
 ---
 
-<div
+<a
+  href={href}
+  target={external ? "_blank" : "_self"}
   class="flex items-center gap-2 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity"
 >
   <div class="rotate-45">
     <Icon name="mdi:arrow-up" />
   </div>
 
-  <a href={href} target={external ? "_blank" : "_self"}>{text}</a>
-</div>
+  <span>{text}</span>
+</a>

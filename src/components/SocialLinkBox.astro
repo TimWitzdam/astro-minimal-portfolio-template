@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon/components";
+import type { SocialLink } from "../types/config";
+
+type Props = SocialLink;
+
+const { title, url, icon, external } = Astro.props;
+---
+
+<a
+  href={url}
+  class="p-4 rounded-lg border border-white border-opacity-30 flex items-center gap-3 group-hover:opacity-30 hover:!opacity-100 transition-opacity"
+  target={external ? "_blank" : "_self"}
+>
+  <Icon name={icon} width={25} height={25} />
+  <div class="flex items-center justify-between w-full">
+    <p>{title}</p>
+    <div class="rotate-45">
+      <Icon name="mdi:arrow-up" />
+    </div>
+  </div>
+</a>
