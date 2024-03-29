@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import LogoImage from "/public/logo.webp";
-import MailIcon from "/public/icons/mail.svg";
+import { Icon } from "astro-icon/components";
 import { navBarLinks } from "../config";
 
 interface Props {
@@ -111,7 +111,7 @@ const { title, description } = Astro.props;
             href="mailto:tim@witzdam.com"
             class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
           >
-            <Image src={MailIcon} alt={"Mail"} width={20} height={20} />
+            <Icon name="mdi:email" width={20} height={20} />
           </a>
         </div>
       </div>
