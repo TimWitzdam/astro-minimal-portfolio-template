@@ -53,3 +53,15 @@ export type AboutPageContent = {
     links: SocialLink[];
   };
 };
+
+export type Project = {
+  title: string;
+  description: string;
+  image: string;
+  year: string;
+  url: string;
+};
+
+export type ProjectPageContent = {
+  projects: Project[];
+};

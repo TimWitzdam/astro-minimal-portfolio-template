@@ -4,6 +4,7 @@ import type {
   HomePageLink,
   Identity,
   AboutPageContent,
+  ProjectPageContent,
 } from "./types/config";
 
 export const identity: Identity = {
@@ -101,4 +102,34 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
     description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
     links: socialLinks,
   },
+};
+
+// Projects (/projects)
+export const projectsPageContent: ProjectPageContent = {
+  projects: [
+    {
+      title: "Project 1",
+      description: "Project 1 Description",
+      image:
+        "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      year: "2024",
+      url: "https://github.com/TimWitzdam",
+    },
+    {
+      title: "Project 1",
+      description: "Project 1 Description",
+      image:
+        "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      year: "2024",
+      url: "https://github.com/TimWitzdam",
+    },
+    {
+      title: "Project 1",
+      description: "Project 1 Description",
+      image:
+        "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      year: "2024",
+      url: "https://github.com/TimWitzdam",
+    },
+  ],
 };
