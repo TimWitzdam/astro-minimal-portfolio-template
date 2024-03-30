@@ -1,6 +1,7 @@
 export type NavBarLink = {
   title: string;
   url: string;
+  external?: boolean;
 };
 
 export type SocialLink = {
@@ -10,18 +11,28 @@ export type SocialLink = {
   external?: boolean;
 };
 
-export type HomePageLink = {
-  title: string;
-  url: string;
-  external?: boolean;
-};
-
 export type Identity = {
   name: string;
-  role: string;
-  description: string;
   logo: string;
   email: string;
+};
+
+export type SEOInfo = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+export type HomePageContent = {
+  seo: SEOInfo;
+  role: string;
+  description: string;
+  socialLinks: SocialLink[];
+  links: {
+    title: string;
+    url: string;
+    external?: boolean;
+  }[];
 };
 
 export type ResumeItem = {
@@ -35,6 +46,8 @@ export type ResumeItem = {
 };
 
 export type AboutPageContent = {
+  seo: SEOInfo;
+  subtitle: string;
   about: {
     description: string;
     image_l: {
@@ -65,9 +78,12 @@ export type Project = {
 };
 
 export type ProjectPageContent = {
+  seo: SEOInfo;
+  subtitle: string;
   projects: Project[];
 };
 
 export type BlogPageContent = {
+  seo: SEOInfo;
   subtitle: string;
 };

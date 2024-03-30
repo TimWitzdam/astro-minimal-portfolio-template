@@ -1,18 +1,15 @@
 import type {
   NavBarLink,
   SocialLink,
-  HomePageLink,
   Identity,
   AboutPageContent,
   ProjectPageContent,
   BlogPageContent,
+  HomePageContent,
 } from "./types/config";
 
 export const identity: Identity = {
   name: "Tim Witzdam",
-  role: "Student & Software Developer",
-  description:
-    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
   logo: "/logo.webp",
   email: "tim@witzdam.com",
 };
@@ -50,19 +47,39 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
-export const homePageLinks: HomePageLink[] = [
-  {
-    title: "My Projects",
-    url: "/projects",
+// Home (/)
+export const homePageContent: HomePageContent = {
+  seo: {
+    title: "Tim Witzdam",
+    description:
+      "Full time student from Germany who loves building cool things using code.",
+    image: identity.logo,
   },
-  {
-    title: "About Me",
-    url: "/about",
-  },
-];
+  role: "Student & Software Developer",
+  description:
+    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
+  socialLinks: socialLinks,
+  links: [
+    {
+      title: "My Projects",
+      url: "/projects",
+    },
+    {
+      title: "About Me",
+      url: "/about",
+    },
+  ],
+};
 
 // About (/about)
 export const aboutPageContent: AboutPageContent = {
+  seo: {
+    title: "About | Tim Witzdam",
+    description:
+      "Full time student from Germany who loves building cool things using code.",
+    image: identity.logo,
+  },
+  subtitle: "Some information about myself",
   about: {
     description: `
 I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.
@@ -109,6 +126,12 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
 
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
+  seo: {
+    title: "Projects | Tim Witzdam",
+    description: "Check out what I've been working on.",
+    image: identity.logo,
+  },
+  subtitle: "Check out what I've been working on.",
   projects: [
     {
       title: "Project 1",
@@ -137,6 +160,12 @@ export const projectsPageContent: ProjectPageContent = {
   ],
 };
 
+// Blog (/blog)
 export const blogPageContent: BlogPageContent = {
+  seo: {
+    title: "Blog | Tim Witzdam",
+    description: "Thoughts, stories and ideas.",
+    image: identity.logo,
+  },
   subtitle: "Thoughts, stories and ideas.",
 };

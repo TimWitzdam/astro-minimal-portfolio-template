@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 import LogoImage from "/public/logo.webp";
 import { Icon } from "astro-icon/components";
 import { navBarLinks, identity } from "../config";
+import type { SEOInfo } from "../types/config";
 
 interface Props {
-  title: string;
-  description: string;
+  seo: SEOInfo;
 }
 
-const { title, description } = Astro.props;
+const { seo } = Astro.props;
 ---
 
 <script>
@@ -54,10 +54,11 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:image" content={seo.image} />
   </head>
   <body>
     <header>
@@ -75,6 +76,7 @@ const { title, description } = Astro.props;
                   <a
                     class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
                     href={link.url}
+                    target={link.external ? "_blank" : "_self"}
                   >
                     {link.title}
                   </a>
@@ -96,7 +98,11 @@ const { title, description } = Astro.props;
                 {
                   navBarLinks.map((link) => (
                     <li>
-                      <a class="block pl-4 py-3" href={link.url}>
+                      <a
+                        class="block pl-4 py-3"
+                        href={link.url}
+                        target={link.external ? "_blank" : "_self"}
+                      >
                         {link.title}
                       </a>
                     </li>
@@ -147,5 +153,15 @@ const { title, description } = Astro.props;
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+
+  .hover-underline {
+    text-decoration: underline 1px rgba(0, 0, 0, 0);
+    text-underline-offset: 5px;
+    transition: text-decoration-color 300ms;
+  }
+
+  .post:hover .hover-underline {
+    text-decoration-color: rgba(255, 255, 255, 1);
   }
 </style>

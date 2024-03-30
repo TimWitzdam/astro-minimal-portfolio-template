@@ -4,10 +4,10 @@ import { projectsPageContent } from "../config";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<Layout title="Welcome to Astro." description="Welcome">
+<Layout seo={projectsPageContent.seo}>
   <section class="mt-10 max-w-2xl mx-auto px-6">
     <h1 class="font-bold text-3xl mb-1">Projects</h1>
-    <p class="opacity-60 mb-10">Check out what I've been working on.</p>
+    <p class="opacity-60 mb-10">{projectsPageContent.subtitle}</p>
     <div class="grid grid-cols-1 group">
       {
         projectsPageContent.projects.map((project) => (

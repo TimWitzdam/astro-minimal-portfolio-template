@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { socialLinks, homePageLinks, identity } from "../config";
+import { homePageContent, identity } from "../config";
 import SocialLink from "../components/SocialLink.astro";
 import Link from "../components/Link.astro";
 import { getCollection } from "astro:content";
@@ -9,10 +9,10 @@ import { getCollection } from "astro:content";
 const posts = await getCollection("posts");
 ---
 
-<Layout title="Welcome to Astro." description="Welcome">
+<Layout seo={homePageContent.seo}>
   <section class="mt-10 max-w-2xl mx-auto px-6">
     <h1 class="font-bold text-3xl mb-1">{identity.name}</h1>
-    <p class="opacity-60 mb-10">{identity.role}</p>
+    <p class="opacity-60 mb-10">{homePageContent.role}</p>
     <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8">
       <Image
         src={identity.logo}
@@ -23,7 +23,7 @@ const posts = await getCollection("posts");
       />
       <div class="group flex flex-col justify-center gap-2 w-fit">
         {
-          socialLinks.map((link) => (
+          homePageContent.socialLinks.map((link) => (
             <SocialLink
               title={link.title}
               url={link.url}
@@ -35,11 +35,11 @@ const posts = await getCollection("posts");
       </div>
     </div>
     <p class="max-w-md mb-8">
-      {identity.description}
+      {homePageContent.description}
     </p>
     <div class="flex items-center gap-4 group w-fit">
       {
-        homePageLinks.map((link) => (
+        homePageContent.links.map((link) => (
           <Link text={link.title} href={link.url} external={link.external} />
         ))
       }
@@ -80,15 +80,3 @@ const posts = await getCollection("posts");
     </div>
   </section>
 </Layout>
-
-<style>
-  .hover-underline {
-    text-decoration: underline 1px rgba(0, 0, 0, 0);
-    text-underline-offset: 5px;
-    transition: text-decoration-color 300ms;
-  }
-
-  .post:hover .hover-underline {
-    text-decoration-color: rgba(255, 255, 255, 1);
-  }
-</style>

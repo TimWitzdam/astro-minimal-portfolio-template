@@ -14,7 +14,13 @@ if (!entry) {
 const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 ---
 
-<Layout title="Welcome to Astro." description="Welcome">
+<Layout
+  seo={{
+    title: entry.data.title,
+    description: entry.data.description,
+    image: entry.data.image.url,
+  }}
+>
   <section class="mt-10 max-w-2xl mx-auto px-6">
     <h1 class="font-bold text-3xl mb-4">{entry.data.title}</h1>
     <p class="opacity-60 mb-6">
