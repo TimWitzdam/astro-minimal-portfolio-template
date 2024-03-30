@@ -65,3 +65,7 @@ export type Project = {
 export type ProjectPageContent = {
   projects: Project[];
 };
+
+export type BlogPageContent = {
+  subtitle: string;
+};

@@ -5,6 +5,7 @@ import type {
   Identity,
   AboutPageContent,
   ProjectPageContent,
+  BlogPageContent,
 } from "./types/config";
 
 export const identity: Identity = {
@@ -132,4 +133,8 @@ export const projectsPageContent: ProjectPageContent = {
       url: "https://github.com/TimWitzdam",
     },
   ],
+};
+
+export const blogPageContent: BlogPageContent = {
+  subtitle: "Thoughts, stories and ideas.",
 };
