@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { identity } from "../../config";
+
+const { slug } = Astro.params;
+const entry = await getEntry("posts", slug as string);
+
+if (!entry) {
+  return Astro.redirect("/blog");
+}
+
+const { Content, headings } = await entry.render();
+---
+
+<Layout title="Welcome to Astro." description="Welcome">
+  <section class="mt-10 max-w-2xl mx-auto px-6">
+    <h1 class="font-bold text-3xl mb-4">{entry.data.title}</h1>
+    <p class="opacity-60 mb-6">{entry.data.description}</p>
+    <div class="flex gap-4 mb-6">
+      <Image
+        src={identity.image}
+        alt={identity.name}
+        width={40}
+        height={40}
+        class="w-[40px] aspect-square object-cover rounded-full"
+      />
+      <div>
+        <p class="font-medium">{identity.name}</p>
+        <p class="opacity-60">{entry.data.pubDate.toLocaleDateString()}</p>
+      </div>
+    </div>
+    <Image
+      src={entry.data.image.url}
+      alt={entry.data.image.alt}
+      width={800}
+      height={300}
+      class="apsect-video w-full rounded-xl mb-10"
+    />
+    <article
+      class="prose prose-invert prose-a:text-blue-300 prose-a:underline-offset-4 prose-headings:mb-2 prose-p:text-[#b3b3b3]"
+    >
+      <Content />
+    </article>
+  </section>
+</Layout>
