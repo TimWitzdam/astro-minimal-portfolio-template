@@ -5,6 +5,10 @@ import { getCollection } from "astro:content";
 import { blogPageContent } from "../../config";
 
 const posts = await getCollection("posts");
+for (const post of posts) {
+  const { remarkPluginFrontmatter } = await post.render();
+  post.data.readingTime = remarkPluginFrontmatter.minutesRead;
+}
 ---
 
 <Layout title="Welcome to Astro." description="Welcome">
@@ -28,7 +32,8 @@ const posts = await getCollection("posts");
             />
             <div class="mt-4 sm:my-auto">
               <p class="opacity-60 mb-2">
-                {post.data.pubDate.toLocaleDateString()}
+                {post.data.pubDate.toLocaleDateString()} ·{" "}
+                {post.data.readingTime}
               </p>
               <h3 class="font-medium hover-underline">{post.data.title}</h3>
             </div>

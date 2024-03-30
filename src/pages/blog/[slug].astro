@@ -11,13 +11,15 @@ if (!entry) {
   return Astro.redirect("/blog");
 }
 
-const { Content, headings } = await entry.render();
+const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <Layout title="Welcome to Astro." description="Welcome">
   <section class="mt-10 max-w-2xl mx-auto px-6">
     <h1 class="font-bold text-3xl mb-4">{entry.data.title}</h1>
-    <p class="opacity-60 mb-6">{entry.data.description}</p>
+    <p class="opacity-60 mb-6">
+      {entry.data.description}
+    </p>
     <div class="flex gap-4 mb-6">
       <Image
         src={identity.image}
@@ -28,7 +30,11 @@ const { Content, headings } = await entry.render();
       />
       <div>
         <p class="font-medium">{identity.name}</p>
-        <p class="opacity-60">{entry.data.pubDate.toLocaleDateString()}</p>
+        <p class="opacity-60">
+          {entry.data.pubDate.toLocaleDateString()} · {
+            remarkPluginFrontmatter.minutesRead
+          }
+        </p>
       </div>
     </div>
     <Image
