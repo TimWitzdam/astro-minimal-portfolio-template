@@ -13,7 +13,8 @@ export const identity: Identity = {
   role: "Student & Software Developer",
   description:
     "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
-  image: "/logo.webp",
+  logo: "/logo.webp",
+  email: "tim@witzdam.com",
 };
 
 export const navBarLinks: NavBarLink[] = [

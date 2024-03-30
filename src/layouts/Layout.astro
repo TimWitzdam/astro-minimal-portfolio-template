@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import LogoImage from "/public/logo.webp";
 import { Icon } from "astro-icon/components";
-import { navBarLinks } from "../config";
+import { navBarLinks, identity } from "../config";
 
 interface Props {
   title: string;
@@ -108,7 +108,7 @@ const { title, description } = Astro.props;
         </nav>
         <div>
           <a
-            href="mailto:tim@witzdam.com"
+            href=`mailto:${identity.email}`
             class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
           >
             <Icon name="mdi:email" width={20} height={20} />

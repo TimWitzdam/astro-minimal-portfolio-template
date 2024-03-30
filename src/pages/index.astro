@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import LogoImage from "/public/logo.webp";
 import { socialLinks, homePageLinks, identity } from "../config";
 import SocialLink from "../components/SocialLink.astro";
 import Link from "../components/Link.astro";
@@ -16,8 +15,8 @@ const posts = await getCollection("posts");
     <p class="opacity-60 mb-10">{identity.role}</p>
     <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8">
       <Image
-        src={LogoImage}
-        alt="Logo"
+        src={identity.logo}
+        alt={identity.name}
         width={100}
         height={100}
         class="rounded-full"

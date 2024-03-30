@@ -20,7 +20,8 @@ export type Identity = {
   name: string;
   role: string;
   description: string;
-  image: string;
+  logo: string;
+  email: string;
 };
 
 export type ResumeItem = {
