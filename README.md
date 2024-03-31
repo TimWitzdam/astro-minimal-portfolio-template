@@ -1,12 +1,14 @@
 <div align="center">
     <h1 align="center">Minimal portfolio template for Astro</a></h1>
     <p align="center">Open source minimalistic portfolio template created with <a href="https://astro.build/">Astro</a> and <a href="https://tailwindcss.com/">Tailwind</a>. Design inspired by <a href="https://www.b-r.io/">Brian Ruiz</a> </p>
-  <a href="https://cryptodisplay.net?utm_source=github&utm_medium=image_banner" align="center">
+  <a href="https://minimal-portfolio.witzdam.com/" align="center">
     <img src="https://legende.cc/ss/oNWKICeAR1.png" alt="Theme preview" height="650"/>
     <img src="https://legende.cc/ss/ygdmeIzQIp.png" alt="Lighthouse score 100" />
 </a>
 </div>
 <br />
+
+[Preview](https://minimal-portfolio.witzdam.com/)
 
 ## 🔥 Features
 
