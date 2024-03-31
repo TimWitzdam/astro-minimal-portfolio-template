@@ -87,11 +87,11 @@ I'm Tim Witzdam, a full time student from Germany who also loves building cool t
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque placeat est architecto tempora voluptatem sit suscipit aspernatur? <br/><br/>
 Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium consectetur nemo vero officia itaque.`, // Markdown is supported
     image_l: {
-      url: "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      url: "/demo-1.jpg",
       alt: "Left Picture",
     },
     image_r: {
-      url: "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      url: "/demo-1.jpg",
       alt: "Right Picture",
     },
   },
@@ -136,24 +136,21 @@ export const projectsPageContent: ProjectPageContent = {
     {
       title: "Project 1",
       description: "Project 1 Description",
-      image:
-        "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      image: "/demo-2.jpg",
       year: "2024",
       url: "https://github.com/TimWitzdam",
     },
     {
       title: "Project 1",
       description: "Project 1 Description",
-      image:
-        "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      image: "/demo-2.jpg",
       year: "2024",
       url: "https://github.com/TimWitzdam",
     },
     {
       title: "Project 1",
       description: "Project 1 Description",
-      image:
-        "https://images.pexels.com/photos/19845821/pexels-photo-19845821/free-photo-of-sheep-on-a-hillside-at-sunset.jpeg",
+      image: "/demo-2.jpg",
       year: "2024",
       url: "https://github.com/TimWitzdam",
     },
