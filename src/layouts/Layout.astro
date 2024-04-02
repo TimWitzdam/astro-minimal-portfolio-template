@@ -136,8 +136,15 @@ const { seo } = Astro.props;
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/InterVariable.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+  }
+
   html {
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     background: #000000;
   }
 
