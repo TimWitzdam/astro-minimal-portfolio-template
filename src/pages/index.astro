@@ -7,6 +7,12 @@ import Link from "../components/Link.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
+posts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime();
+  const dateB = new Date(b.data.pubDate).getTime();
+  return dateB - dateA;
+});
+posts.splice(2)
 ---
 
 <Layout seo={homePageContent.seo}>
@@ -66,6 +72,7 @@ const posts = await getCollection("posts");
                 {post.data.pubDate.toLocaleDateString()}
               </p>
               <h3 class="font-medium hover-underline">{post.data.title}</h3>
+              <p class="text-sm opacity-60 mt-2 mb-3">{post.data.description}</p>
             </div>
           </a>
         ))
