@@ -1,9 +1,9 @@
 ---
 title: "My First Blog Post with a very long name"
-pubDate: 2022-07-01 #Y-M-D
-description: "Test"
+pubDate: 2024-04-01 #Y-M-D
+description: "Talent Land 2024"
 author: "Tim"
-image: { url: "/demo-1.jpg", alt: "Test" }
+image: { url: "/Talent.jpg", alt: "Test" }
 ---
 
-This is test content
+Visit an talent Land 2024 in Guadalagara jalisco the event is developers and software engenieer
