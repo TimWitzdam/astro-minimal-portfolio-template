@@ -9,9 +9,9 @@ import type {
 } from "./types/config";
 
 export const identity: Identity = {
-  name: "Tim Witzdam",
+  name: "Alexander Alegria",
   logo: "/logo.webp",
-  email: "tim@witzdam.com",
+  email: "alexander_alegria@outlook.com",
 };
 
 export const navBarLinks: NavBarLink[] = [
@@ -36,13 +36,13 @@ export const navBarLinks: NavBarLink[] = [
 export const socialLinks: SocialLink[] = [
   {
     title: "GitHub",
-    url: "https://github.com/TimWitzdam",
+    url: "https://github.com/MrJoy05",
     icon: "mdi:github",
     external: true,
   },
   {
     title: "Mail",
-    url: "mailto:tim@witzdam.com",
+    url: "alexander_alegria@outlook.com",
     icon: "mdi:email",
   },
 ];
@@ -50,14 +50,14 @@ export const socialLinks: SocialLink[] = [
 // Home (/)
 export const homePageContent: HomePageContent = {
   seo: {
-    title: "Tim Witzdam",
+    title: "Alexander Alegria ",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "Full time student from Mexico who loves building cool things using code.",
     image: identity.logo,
   },
   role: "Student & Software Developer",
   description:
-    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
+    "I'm Alexander Alegria, a full time student from Mexico who also loves building cool things using code and develop projects for companies",
   socialLinks: socialLinks,
   links: [
     {
@@ -74,52 +74,51 @@ export const homePageContent: HomePageContent = {
 // About (/about)
 export const aboutPageContent: AboutPageContent = {
   seo: {
-    title: "About | Tim Witzdam",
+    title: "About | Alexander Alegria",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "I'm Alexander Alegria, a full time student from Mexico who also loves building cool things using code and develop projects for companies",
     image: identity.logo,
   },
   subtitle: "Some information about myself",
   about: {
     description: `
-I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.
-<br/><br/>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque placeat est architecto tempora voluptatem sit suscipit aspernatur? <br/><br/>
-Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium consectetur nemo vero officia itaque.`, // Markdown is supported
+I'm Alexander Alegria, a full time student from Mexico who also loves building cool things using code and develop projects for companies.<br/><br/>
+I am passionate about the world of software development, with a particular interest in fullstack development and UX/UI design.<br/><br/>
+I enjoy creating complete solutions that span both frontend and backend, ensuring an intuitive and engaging user experience. My goal is to combine functionality and aesthetics to develop applications that not only work well, but also offer an exceptional experience to users.`, 
     image_l: {
-      url: "/demo-1.jpg",
+      url: "/Talent.jpg",
       alt: "Left Picture",
     },
     image_r: {
-      url: "/demo-1.jpg",
+      url: "/UniMap.jpg",
       alt: "Right Picture",
     },
   },
   work: {
-    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, // Markdown is supported
+    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, 
     items: [
       {
         title: "Software Developer",
         company: {
-          name: "Freelance",
+          name: "Trainne Programer in Fletes Mexico",
           image: "/logo.webp",
-          url: "https://github.com/TimWitzdam",
+          url: "",
         },
-        date: "2021 - Present",
+        date: "2024 - Present",
       },
       {
         title: "Software Developer",
         company: {
           name: "Freelance",
           image: "/logo.webp",
-          url: "https://github.com/TimWitzdam",
+          url: "",
         },
         date: "2019 - 2021",
       },
     ],
   },
   connect: {
-    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
+    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, 
     links: socialLinks,
   },
 };
@@ -127,32 +126,32 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
   seo: {
-    title: "Projects | Tim Witzdam",
-    description: "Check out what I've been working on.",
+    title: "Projects | Alexander Alegria",
+    description: "Check out what I've been working on.",    
     image: identity.logo,
   },
   subtitle: "Check out what I've been working on.",
   projects: [
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
-      year: "2024",
-      url: "https://github.com/TimWitzdam",
+      title: "TrainerHub",
+      description: " Trainer Hub is an innovative platform designed to connect clients with qualified personal trainers from all over Mexico. Facilitate access to personalized training services, adapted to the individual needs and objectives of each client, no matter where they are located.",
+      image: "/trainer.jpg",
+      year: "2023",
+      url: "",
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
+      title: "Tap Tap List",
+      description: "An all-in-one task management solution featuring an intuitive web interface, a Python API, and Firebase databases. This application enables users to efficiently list, create, update, and delete tasks.",
+      image: "/tap.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://github.com/MrJoy05/Prueba-tecnica",
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
+      title: "Bot Whatsapp backend project",
+      description: "This project implements a chatbot using the WhatsApp JS API and Dialogflow.The chatbot is designed to provide automated responses to users via WhatsApp, using Dialogflow's powerful natural language processing technology",
+      image: "/bot.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://github.com/MrJoy05/Bot-Whatsapp",
     },
   ],
 };
@@ -160,7 +159,7 @@ export const projectsPageContent: ProjectPageContent = {
 // Blog (/blog)
 export const blogPageContent: BlogPageContent = {
   seo: {
-    title: "Blog | Tim Witzdam",
+    title: "Blog | Alexander Alegria",
     description: "Thoughts, stories and ideas.",
     image: identity.logo,
   },
