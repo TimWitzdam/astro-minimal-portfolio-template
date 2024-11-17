@@ -9,8 +9,8 @@ import type {
 } from "./types/config";
 
 export const identity: Identity = {
-  name: "Tim Witzdam",
-  logo: "/logo.webp",
+  name: "Elyon John",
+  logo: "/logo.png",
   email: "tim@witzdam.com",
 };
 
@@ -36,13 +36,13 @@ export const navBarLinks: NavBarLink[] = [
 export const socialLinks: SocialLink[] = [
   {
     title: "GitHub",
-    url: "https://github.com/TimWitzdam",
+    url: "https://github.com/Lawani-EJ",
     icon: "mdi:github",
     external: true,
   },
   {
     title: "Mail",
-    url: "mailto:tim@witzdam.com",
+    url: "lawanijohn70@gmail.com",
     icon: "mdi:email",
   },
 ];
@@ -50,14 +50,14 @@ export const socialLinks: SocialLink[] = [
 // Home (/)
 export const homePageContent: HomePageContent = {
   seo: {
-    title: "Tim Witzdam",
+    title: "Elyon John",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "Full time student from Nigeria who loves building cool things using code.",
     image: identity.logo,
   },
   role: "Student & Software Developer",
   description:
-    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
+    "Hi I'm Elyon John, a full time student at Babcock University, who also loves building cool things using code. I've built a foundational understanding of Web Development. And I'm on a passionate learning journey to help build and design digital experiences",
   socialLinks: socialLinks,
   links: [
     {
@@ -74,7 +74,7 @@ export const homePageContent: HomePageContent = {
 // About (/about)
 export const aboutPageContent: AboutPageContent = {
   seo: {
-    title: "About | Tim Witzdam",
+    title: "About | Elyon John",
     description:
       "Full time student from Germany who loves building cool things using code.",
     image: identity.logo,
