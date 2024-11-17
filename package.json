@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/node": "^8.3.3",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/node": "^8.3.4",
+    "@astrojs/tailwind": "^5.1.2",
     "@astropub/md": "^0.4.0",
-    "astro": "^4.15.4",
+    "astro": "^4.16.13",
     "astro-icon": "^1.1.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
