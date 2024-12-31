@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { blogPageContent } from "../../config";
+import { render } from "astro:content";
 
 const posts = await getCollection("posts");
 posts.sort((a, b) => {
@@ -11,7 +12,7 @@ posts.sort((a, b) => {
   return dateB - dateA;
 });
 for (const post of posts) {
-  const { remarkPluginFrontmatter } = await post.render();
+  const { remarkPluginFrontmatter } = await render(post);
   post.data.readingTime = remarkPluginFrontmatter.minutesRead;
 }
 ---
@@ -25,7 +26,7 @@ for (const post of posts) {
       {
         posts.map((post) => (
           <a
-            href={`/blog/${post.slug}`}
+            href={`/blog/${post.id}`}
             class=" sm:flex sm:flex-row-reverse sm:justify-between sm:gap-6 post"
           >
             <Image

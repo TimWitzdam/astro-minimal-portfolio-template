@@ -1,17 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import { Image } from "astro:assets";
 import { identity } from "../../config";
 
-const { slug } = Astro.params;
-const entry = await getEntry("posts", slug as string);
+const { id } = Astro.params;
+const entry = await getEntry("posts", id as string);
 
 if (!entry) {
   return Astro.redirect("/blog");
 }
 
-const { Content, remarkPluginFrontmatter } = await entry.render();
+const { Content,  remarkPluginFrontmatter} = await render(entry);
 ---
 
 <Layout
