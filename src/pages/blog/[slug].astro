@@ -11,7 +11,7 @@ if (!entry) {
   return Astro.redirect("/blog");
 }
 
-const { Content, headings, remarkPluginFrontmatter } = await entry.render();
+const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <Layout

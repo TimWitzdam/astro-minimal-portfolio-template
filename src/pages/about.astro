@@ -3,8 +3,12 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import { aboutPageContent } from "../config";
 import ResumeItem from "../components/ResumeItem.astro";
-import { Markdown } from "@astropub/md";
 import SocialLinkBox from "../components/SocialLinkBox.astro";
+import {marked} from "marked"
+
+const pageDescription = marked.parse(aboutPageContent.about.description)
+const workDescription = marked.parse(aboutPageContent.work.description)
+const connectDescription = marked.parse(aboutPageContent.connect.description)
 ---
 
 <Layout seo={aboutPageContent.seo}>
@@ -12,7 +16,7 @@ import SocialLinkBox from "../components/SocialLinkBox.astro";
     <h1 class="font-bold text-3xl mb-1">About</h1>
     <p class="opacity-60 mb-10">{aboutPageContent.subtitle}</p>
     <div class="mb-14">
-      <Markdown of={aboutPageContent.about.description} />
+      <Fragment set:html={pageDescription} />
     </div>
     <div class="flex flex-col min-[410px]:flex-row">
       <Image
@@ -35,7 +39,7 @@ import SocialLinkBox from "../components/SocialLinkBox.astro";
     <h2 class="mb-8 sm:mb-0 opacity-60">Work</h2>
     <div>
       <div class="mb-6">
-        <Markdown of={aboutPageContent.work.description} />
+        <Fragment set:html={workDescription} />
       </div>
       <div class="grid grid-cols-1 group">
         {aboutPageContent.work.items.map((item) => <ResumeItem {...item} />)}
@@ -46,7 +50,7 @@ import SocialLinkBox from "../components/SocialLinkBox.astro";
     <h2 class="mb-8 sm:mb-0 opacity-60">Connect</h2>
     <div>
       <div class="mb-6">
-        <Markdown of={aboutPageContent.work.description} />
+        <Fragment set:html={connectDescription} />
       </div>
       <div class="grid grid-cols-2 gap-2 group">
         {

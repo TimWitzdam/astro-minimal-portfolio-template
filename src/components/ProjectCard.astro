@@ -1,11 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import type { Project } from "../types/config";
-import { Markdown } from "@astropub/md";
+import {marked} from "marked"
 
 type Props = Project;
 
 const { title, description, image, year, url } = Astro.props;
+
+const htmlDescription = marked.parse(description)
 ---
 
 <a
@@ -28,7 +30,7 @@ const { title, description, image, year, url } = Astro.props;
       <span class="opacity-60">· {year}</span>
     </div>
     <div class="opacity-60">
-      <Markdown of={description} />
+      <Fragment set:html={htmlDescription} />
     </div>
   </div>
 </a>
