@@ -2,8 +2,8 @@
     <h1 align="center">Minimal portfolio template for Astro</a></h1>
     <p align="center">Open source minimalistic portfolio template created with <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>. Design inspired by <a href="https://www.b-r.io/" target="_blank">Brian Ruiz</a> </p>
   <a href="https://minimal-portfolio.witzdam.com/" target="_blank" align="center">
-    <img src="https://shaare.it/i/cgJ8fj.png" alt="Theme preview" width="975"/>
-</a>
+    <img width="2370" height="1370" alt="image" src="https://github.com/user-attachments/assets/5d4cd62d-4115-441f-991f-79ee5e8124b3" />
+  </a>
 </div>
 <br />
 

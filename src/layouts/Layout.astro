@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import { navBarLinks, identity } from "../config";
@@ -144,9 +145,6 @@ const { seo } = Astro.props;
   }
 
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     color: white;
   }

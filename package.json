@@ -1,7 +1,7 @@
 {
   "name": "minimal-portfolio",
   "type": "module",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/node": "^9.0.0",
-    "@astrojs/tailwind": "^5.1.4",
-    "astro": "^5.1.1",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/node": "^9.5.1",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.16.4",
     "astro-icon": "^1.1.0",
     "marked": "^15.0.4",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.1.17",
     "typescript": "^5.4.3"
   },
   "devDependencies": {
