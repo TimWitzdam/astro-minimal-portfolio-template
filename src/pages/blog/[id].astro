@@ -26,22 +26,13 @@ const { Content,  remarkPluginFrontmatter} = await render(entry);
     <p class="opacity-60 mb-6">
       {entry.data.description}
     </p>
-    <div class="flex gap-4 mb-6">
-      <Image
-        src={identity.logo}
-        alt={identity.name}
-        width={40}
-        height={40}
-        class="w-[40px] aspect-square object-cover rounded-full"
-      />
-      <div>
-        <p class="font-medium">{identity.name}</p>
-        <p class="opacity-60">
-          {entry.data.pubDate.toLocaleDateString()} · {
-            remarkPluginFrontmatter.minutesRead
-          }
-        </p>
-      </div>
+    <div class="mb-6">
+      <p class="font-medium">{identity.name}</p>
+      <p class="opacity-60">
+        {entry.data.pubDate.toLocaleDateString()} · {
+          remarkPluginFrontmatter.minutesRead
+        }
+      </p>
     </div>
     <Image
       src={entry.data.image.url}

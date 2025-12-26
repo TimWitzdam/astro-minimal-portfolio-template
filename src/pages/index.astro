@@ -19,26 +19,17 @@ posts.splice(2)
   <section class="mt-10 max-w-2xl mx-auto px-6">
     <h1 class="font-bold text-3xl mb-1">{identity.name}</h1>
     <p class="opacity-60 mb-10">{homePageContent.role}</p>
-    <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8">
-      <Image
-        src={identity.logo}
-        alt={identity.name}
-        width={100}
-        height={100}
-        class="rounded-full"
-      />
-      <div class="group flex flex-col justify-center gap-2 w-fit">
-        {
-          homePageContent.socialLinks.map((link) => (
-            <SocialLink
-              title={link.title}
-              url={link.url}
-              icon={link.icon}
-              external={link.external}
-            />
-          ))
-        }
-      </div>
+    <div class="group flex flex-col gap-2 w-fit mb-8">
+      {
+        homePageContent.socialLinks.map((link) => (
+          <SocialLink
+            title={link.title}
+            url={link.url}
+            icon={link.icon}
+            external={link.external}
+          />
+        ))
+      }
     </div>
     <p class="max-w-md mb-8">
       {homePageContent.description}

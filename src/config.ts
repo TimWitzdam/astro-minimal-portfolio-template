@@ -9,9 +9,9 @@ import type {
 } from "./types/config";
 
 export const identity: Identity = {
-  name: "Tim Witzdam",
+  name: "Tina Rahimi",
   logo: "/logo.webp",
-  email: "tim@witzdam.com",
+  email: "Tina200281@gmail.com",
 };
 
 export const navBarLinks: NavBarLink[] = [
@@ -35,33 +35,44 @@ export const navBarLinks: NavBarLink[] = [
 
 export const socialLinks: SocialLink[] = [
   {
-    title: "GitHub",
-    url: "https://github.com/TimWitzdam",
-    icon: "mdi:github",
+    title: "Phone",
+    url: "tel:+989215384489",
+    icon: "mdi:phone",
+  },
+  {
+    title: "Email",
+    url: "mailto:Tina200281@gmail.com",
+    icon: "mdi:email",
+  },
+  {
+    title: "Location",
+    url: "https://www.google.com/maps/search/?api=1&query=Tehran+Iran",
+    icon: "mdi:map-marker",
     external: true,
   },
   {
-    title: "Mail",
-    url: "mailto:tim@witzdam.com",
-    icon: "mdi:email",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/tina200281",
+    icon: "mdi:linkedin",
+    external: true,
   },
 ];
 
 // Home (/)
 export const homePageContent: HomePageContent = {
   seo: {
-    title: "Tim Witzdam",
+    title: "Tina Rahimi",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "Data Scientist and AI Engineer focused on NLP, LLMs, and intelligent systems.",
     image: identity.logo,
   },
-  role: "Student & Software Developer",
+  role: "Data Scientist / AI Engineer",
   description:
-    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
+    "I am an AI engineer and data scientist passionate about NLP and LLM-driven products, building reliable systems that solve real-world problems.",
   socialLinks: socialLinks,
   links: [
     {
-      title: "My Projects",
+      title: "My Work",
       url: "/projects",
     },
     {
@@ -74,18 +85,41 @@ export const homePageContent: HomePageContent = {
 // About (/about)
 export const aboutPageContent: AboutPageContent = {
   seo: {
-    title: "About | Tim Witzdam",
+    title: "About | Tina Rahimi",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "Data Scientist and AI Engineer focused on NLP, LLMs, and applied machine learning.",
     image: identity.logo,
   },
-  subtitle: "Some information about myself",
+  subtitle: "Summary, education, and skills",
   about: {
     description: `
-I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.
+I like to think of myself as an explorer in the world of AI, always curious about how LLMs and NLP can be pushed further. I enjoy experimenting with new tools, learning a bit more every day, and building things that actually matter. What excites me most is working with great teams, sharing ideas, and growing together.
 <br/><br/>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque placeat est architecto tempora voluptatem sit suscipit aspernatur? <br/><br/>
-Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium consectetur nemo vero officia itaque.`, // Markdown is supported
+**Education**
+<br/>
+Bachelor of Computer Engineering — University of Isfahan (Nov 2020 to Sep 2024)
+<br/>
+GPA: 16.93/20 (~3.386/4.0)
+<br/>
+Core areas: Artificial Intelligence, Software Engineering
+<br/>
+Bachelor’s thesis: LLM-based Security Vulnerability Detection
+<br/><br/>
+**Skills**
+<br/>
+Programming & Scripting: Python, Java (familiar)
+<br/>
+Machine Learning & AI: Scikit-learn, PyTorch, Transformers, LangChain, FastAPI, Hugging Face Datasets, OpenAI, Cohere, Selenium
+<br/>
+NLP & Text Processing: Hazm, NLTK
+<br/>
+Data Manipulation & Visualization: NumPy, Pandas, Matplotlib, Seaborn, Metabase
+<br/>
+Databases & Search: SQL Server, MongoDB, Elasticsearch
+<br/>
+Tools & Platforms: Airflow, Git, Docker, Ollama
+<br/>
+Domain Knowledge: Machine Learning, NLP, Applied Linear Algebra`, // Markdown is supported
     image_l: {
       url: "/demo-1.jpg",
       alt: "Left Picture",
@@ -96,30 +130,39 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
     },
   },
   work: {
-    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, // Markdown is supported
+    description: `Recent roles focused on AI engineering, NLP, and data pipelines.`, // Markdown is supported
     items: [
       {
-        title: "Software Developer",
+        title: "Data Scientist (AI Engineer)",
         company: {
-          name: "Freelance",
+          name: "IraniCard",
           image: "/logo.webp",
-          url: "https://github.com/TimWitzdam",
+          url: "https://iranicard.ir",
         },
-        date: "2021 - Present",
+        date: "Dec 2024 - Present · Isfahan, Iran",
       },
       {
-        title: "Software Developer",
+        title: "Data Scientist (NLP Developer)",
         company: {
-          name: "Freelance",
+          name: "Saminray ICT Co.",
           image: "/logo.webp",
-          url: "https://github.com/TimWitzdam",
+          url: "https://saminray.com",
         },
-        date: "2019 - 2021",
+        date: "Jan 2024 - Dec 2024 · Remote",
+      },
+      {
+        title: "Data Engineer Intern",
+        company: {
+          name: "Digiton.tv",
+          image: "/logo.webp",
+          url: "https://digiton.tv",
+        },
+        date: "Jul 2023 - Sep 2023 · Tehran, Iran",
       },
     ],
   },
   connect: {
-    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
+    description: `Feel free to reach out for collaboration, AI projects, or data science opportunities.`, // Markdown is supported
     links: socialLinks,
   },
 };
@@ -127,32 +170,35 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
   seo: {
-    title: "Projects | Tim Witzdam",
-    description: "Check out what I've been working on.",
+    title: "Projects | Tina Rahimi",
+    description: "Selected AI and data engineering projects.",
     image: identity.logo,
   },
-  subtitle: "Check out what I've been working on.",
+  subtitle: "Selected projects and initiatives",
   projects: [
     {
-      title: "Project 1",
-      description: "Project 1 Description",
+      title: "Intelligent Order Processing Agents",
+      description:
+        "Designed and implemented AI agents to automate order processing and improve system reliability.",
       image: "/demo-2.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://iranicard.ir",
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
+      title: "Persian LLM Semantic Search",
+      description:
+        "Fine-tuned LLMs and built embedding pipelines to improve semantic search and text classification.",
       image: "/demo-2.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://saminray.com",
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
+      title: "User Activity ETL Pipelines",
+      description:
+        "Built ETL pipelines for large-scale user activity data to support analytics and personalization.",
       image: "/demo-2.jpg",
-      year: "2024",
-      url: "https://github.com/TimWitzdam",
+      year: "2023",
+      url: "https://digiton.tv",
     },
   ],
 };
@@ -160,9 +206,9 @@ export const projectsPageContent: ProjectPageContent = {
 // Blog (/blog)
 export const blogPageContent: BlogPageContent = {
   seo: {
-    title: "Blog | Tim Witzdam",
-    description: "Thoughts, stories and ideas.",
+    title: "Blog | Tina Rahimi",
+    description: "Thoughts on AI, NLP, and data science.",
     image: identity.logo,
   },
-  subtitle: "Thoughts, stories and ideas.",
+  subtitle: "Thoughts on AI, NLP, and data science.",
 };
