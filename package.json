@@ -14,7 +14,7 @@
     "@astrojs/node": "^9.5.1",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.4",
-    "astro-icon": "^1.1.0",
+    "astro-icon": "^1.1.5",
     "marked": "^15.0.4",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
